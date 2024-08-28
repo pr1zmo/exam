@@ -1,0 +1,77 @@
+ft_printf/ft_printf.c: In function ‘main’:
+ft_printf/ft_printf.c:55:9: error: implicit declaration of function ‘printf’ [-Werror=implicit-function-declaration]
+   55 |         printf(ft_printf("%d", k);
+      |         ^~~~~~
+ft_printf/ft_printf.c:3:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+    2 | #include <unistd.h>
+  +++ |+#include <stdio.h>
+    3 | 
+ft_printf/ft_printf.c:55:9: error: incompatible implicit declaration of built-in function ‘printf’ [-Werror=builtin-declaration-mismatch]
+   55 |         printf(ft_printf("%d", k);
+      |         ^~~~~~
+ft_printf/ft_printf.c:55:9: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+ft_printf/ft_printf.c:55:34: error: expected ‘)’ before ‘;’ token
+   55 |         printf(ft_printf("%d", k);
+      |               ~                  ^
+      |                                  )
+ft_printf/ft_printf.c:55:16: error: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Werror=int-conversion]
+   55 |         printf(ft_printf("%d", k);
+      |                ^~~~~~~~~~~~~~~~~~
+      |                |
+      |                int
+ft_printf/ft_printf.c:55:16: note: expected ‘const char *’ but argument is of type ‘int’
+ft_printf/ft_printf.c:55:35: error: expected ‘;’ before ‘}’ token
+   55 |         printf(ft_printf("%d", k);
+      |                                   ^
+      |                                   ;
+   56 | 
+   57 | }
+      | ~                                  
+ft_printf/ft_printf.c:52:14: error: unused parameter ‘ac’ [-Werror=unused-parameter]
+   52 | int main(int ac, char **av)
+      |          ~~~~^~
+ft_printf/ft_printf.c:52:25: error: unused parameter ‘av’ [-Werror=unused-parameter]
+   52 | int main(int ac, char **av)
+      |                  ~~~~~~~^~
+cc1: all warnings being treated as errors
+
+<--------------~-~-~-~-~-~-~-~-~------------>
+Simple test$
+--Format---$
+0$
+42$
+1$
+5454$
+2147483647$
+-2147483648$
+-2147483648$
+2147483647$
+$
+0$
+2a$
+1$
+154e$
+7fffffff$
+80000000$
+80000000$
+7fffffff$
+ffffffff$
+$
+$
+toto$
+wiurwuyrhwrywuier$
+(null)$
+--toto-wiurwuyrhwrywuier-(null)-$
+$
+--Mixed---$
+00422a21474836477fffffff-214748364880000000$
+-0-0-42-2a-2147483647-7fffffff--2147483648-80000000-$
+$
+totowiurwuyrhwrywuier(null)$
+--toto-wiurwuyrhwrywuier-(null)-$
+written: 376$
+\n
+<--------------~-~-~-~-~-~-~-~-~------------>\n\n
+<--------------~-~-~-~-~-~-~-~-~------------>
+\n
+<--------------~-~-~-~-~-~-~-~-~------------>

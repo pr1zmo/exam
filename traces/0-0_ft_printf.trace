@@ -1,0 +1,54 @@
+ft_printf/ft_printf.c: In function ‘put_str’:
+ft_printf/ft_printf.c:7:25: error: implicit declaration of function ‘write’ [-Werror=implicit-function-declaration]
+    7 |                 *len += write(1, str++, 1);
+      |                         ^~~~~
+ft_printf/ft_printf.c: In function ‘ft_printf’:
+ft_printf/ft_printf.c:48:17: error: ‘len’ undeclared (first use in this function)
+   48 |         return (len);
+      |                 ^~~
+ft_printf/ft_printf.c:48:17: note: each undeclared identifier is reported only once for each function it appears in
+ft_printf/ft_printf.c:49:1: error: control reaches end of non-void function [-Werror=return-type]
+   49 | }
+      | ^
+cc1: all warnings being treated as errors
+
+<--------------~-~-~-~-~-~-~-~-~------------>
+Simple test$
+--Format---$
+0$
+42$
+1$
+5454$
+2147483647$
+-2147483648$
+-2147483648$
+2147483647$
+$
+0$
+2a$
+1$
+154e$
+7fffffff$
+80000000$
+80000000$
+7fffffff$
+ffffffff$
+$
+$
+toto$
+wiurwuyrhwrywuier$
+(null)$
+--toto-wiurwuyrhwrywuier-(null)-$
+$
+--Mixed---$
+00422a21474836477fffffff-214748364880000000$
+-0-0-42-2a-2147483647-7fffffff--2147483648-80000000-$
+$
+totowiurwuyrhwrywuier(null)$
+--toto-wiurwuyrhwrywuier-(null)-$
+written: 376$
+\n
+<--------------~-~-~-~-~-~-~-~-~------------>\n\n
+<--------------~-~-~-~-~-~-~-~-~------------>
+\n
+<--------------~-~-~-~-~-~-~-~-~------------>
